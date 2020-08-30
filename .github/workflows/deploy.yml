@@ -19,7 +19,7 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          apiKey: ${{ secrets.GATSBY_MICRO_CMS_API_KEY }}
+          GATSBY_MICRO_CMS_API_KEY: ${{ secrets.GATSBY_MICRO_CMS_API_KEY }}
       - uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
