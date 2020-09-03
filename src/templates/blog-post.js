@@ -2,11 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const BlogPost = props => {
   const post = props.data.microcmsBlog
   return (
     <Layout>
+      <SEO title={post.title} />
       <div>
         <h2>{post.title}</h2>
         <div>
